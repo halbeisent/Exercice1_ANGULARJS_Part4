@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="fr" ng-app="app">
+  <head>
+    <meta charset="utf-8" />
+    <title>Exercice 1 Partie 4 ANGULARJS</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+  </head>
+  <body ng-controller="summitCtrl">
+    <p>Justin Trudeau effectue son premier voyage officiel en France. Le chef du gouvernement canadien restera deux jours dans l'Hexagone.
+      Son programme est chargé. Le dirigeant canadien, dont le pays préside cette année le G{{summitNumber}},
+      s'entretiendra avec le président français Emmanuel Macron dès ce lundi.
+    </p><button ng-click="summitNumber = summitNumber + 1" ng-init="count=summitNumber">+</button><button ng-click="summitNumber = summitNumber - 1" ng-init="count=summitNumber">-</button>
+  </body>
+  <script>
+  var app = angular.module('app',[]);
+  app.controller('summitCtrl',function($scope){
+    $scope.summitNumber = 7
+  });
+  </script>
+</html>
